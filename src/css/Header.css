@@ -1,0 +1,15 @@
+.menu-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1.5px solid var(--nav-bar);
+  border-radius: 5px;
+  width: 48rem;
+  height: 3rem;
+  padding: 0 1rem 0 1rem;
+  margin: 5rem auto 2rem auto;
+  font-family: "Montserrat", sans-serif;
+  color: var(--nav-bar);
+  font-weight: 600;
+}

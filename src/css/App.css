@@ -1,0 +1,9 @@
+body {
+  height: 50rem;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

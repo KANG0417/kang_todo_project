@@ -1,0 +1,137 @@
+.main-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 800px;
+  max-width: 1200px;
+}
+
+div h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+
+.input-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  background-color: var(--nav-bar);
+  border-radius: 5px;
+  width: 50rem;
+  height: 5rem;
+  margin: 0 auto;
+  color: var(--white);
+}
+
+.input-title {
+  margin: 0 1rem 0 0.3rem;
+  padding: 0.3rem;
+  outline: 0;
+}
+
+.input-content {
+  margin: 0 1rem 0 0.3rem;
+  padding: 0.3rem;
+  outline: 0;
+}
+
+.input-btn {
+  cursor: pointer;
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  background-color: transparent;
+  color: var(--white);
+  padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+  transition: 0.3s;
+  font-weight: 600;
+  font-family: "IBM Plex Sans KR", sans-serif;
+}
+
+.input-btn:hover {
+  color: var(--nav-bar);
+  background-color: var(--white);
+}
+
+.input-del-btn,
+.input-done-btn,
+.input-cancel-btn {
+  cursor: pointer;
+  border: 1px solid var(--nav-bar);
+  border-radius: 5px;
+  background-color: transparent;
+  color: var(--nav-bar);
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  transition: 0.3s;
+  font-weight: 600;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  margin-right: 0.5rem;
+}
+
+.input-del-btn:hover,
+.input-done-btn:hover,
+.input-cancel-btn:hover {
+  color: var(--white);
+  background-color: var(--nav-bar);
+}
+
+.card-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 3rem 0 1rem 0;
+  width: 50rem;
+  overflow-x: auto;
+}
+
+.card-wrap::-webkit-scrollbar {
+  width: 10px;
+}
+
+.card-wrap::-webkit-scrollbar-thumb {
+  background-color: var(--nav-bar);
+}
+
+.working-card-wrap,
+.done-card-wrap {
+  display: flex;
+  width: 15rem;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-family: "Montserrat", sans-serif;
+}
+
+.working-no-card,
+.done-no-card {
+  margin: 1rem 1rem 1rem 0;
+  border-radius: 5px;
+  padding: 1rem;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  color: var(--nav-bar);
+  font-weight: 600;
+}
+
+.working-card-list,
+.done-card-list {
+  min-width: 10rem;
+  margin: 1rem 1rem 1rem 0;
+  border: 1.5px solid var(--nav-bar);
+  border-radius: 5px;
+  padding: 1rem;
+  font-family: "IBM Plex Sans KR", sans-serif;
+}
+
+.working-title,
+.done-title {
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--nav-bar);
+  margin-bottom: 0.5rem;
+}
+
+.working-content,
+.done-content {
+  margin: 1rem 0;
+}
