@@ -69,3 +69,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # kang-todo-project
+**프로젝트 기간:** 23/11/03 ~ 23/11/06  
+**프로젝트 이름:** TO DO LIST (오늘의 할일)  
+**프로젝트 소개:** 오늘의 할일을 기록합니다  
+**사용한 기술:** git, github, React  
+**기능 구현:** 제목과 내용을 입력하면 working(할일)에 등록되고 완료버튼을 누르면 done(완료)목록에 추가됩니다  
+이때 시간은 완료한 시간을 기준으로 완료가 되고 처음에 등록한 할일은 최초로 등록한 시간을 기준으로 등록됩니다  
+삭제버튼을 누르면 팝업창으로 한번 더 확인을 하고 삭제됩니다  
+**배포주소:** https://kang0417.github.io/kang_todo_project/  
+**블로그:** https://velog.io/@kanjang96
