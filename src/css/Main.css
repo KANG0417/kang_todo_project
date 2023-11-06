@@ -121,13 +121,14 @@
 
 .working-card-list,
 .done-card-list {
-  min-width: 10rem;
+  min-width: 20rem;
   margin: 1rem 1rem 1rem 0;
   border: 1.5px solid var(--point-color);
   border-radius: 5px;
   padding: 1rem;
   font-family: "IBM Plex Sans KR", sans-serif;
   transition: 0.3s;
+  word-break: break-all;
 }
 
 .working-card-list:hover,
@@ -158,11 +159,17 @@
   font-size: 2rem;
   color: var(--main-color);
   margin-bottom: 0.5rem;
+  height: 70px;
+  max-height: 80px;
 }
 
 .working-content,
 .done-content {
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1.2rem;
+  height: 100px;
+  overflow-y: auto;
+  line-height: 1.5rem;
 }
 
 .date-now {

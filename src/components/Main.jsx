@@ -103,6 +103,7 @@ const Main = () => {
             type="text"
             value={queryTitle}
             onChange={handleChangeTitle}
+            maxlength="20"
           />
           내용{" "}
           <input
@@ -110,6 +111,7 @@ const Main = () => {
             type="text"
             value={queryContent}
             onChange={HandleChangebody}
+            maxlength="80"
           />
           <AddCardButton clickAddFunc={clickAddButtonHandler} />
         </form>
