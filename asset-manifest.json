@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/kang_todo_project/static/css/main.42b632e7.css",
+    "main.js": "/kang_todo_project/static/js/main.81c152a9.js",
+    "static/js/787.49a89eed.chunk.js": "/kang_todo_project/static/js/787.49a89eed.chunk.js",
+    "index.html": "/kang_todo_project/index.html",
+    "main.42b632e7.css.map": "/kang_todo_project/static/css/main.42b632e7.css.map",
+    "main.81c152a9.js.map": "/kang_todo_project/static/js/main.81c152a9.js.map",
+    "787.49a89eed.chunk.js.map": "/kang_todo_project/static/js/787.49a89eed.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.42b632e7.css",
+    "static/js/main.81c152a9.js"
+  ]
+}
