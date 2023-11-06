@@ -4,10 +4,10 @@ function RemoveCardButton({ clickRemoveFunc, data }) {
   return (
     <button
       type="submit"
-      className="input-del-btn"
+      className="input-done-btn"
       onClick={() => clickRemoveFunc(data.id)}
     >
-      삭제하기
+      지우기
     </button>
   );
 }

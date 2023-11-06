@@ -8,17 +8,15 @@ const MenuTitle = () => {
   ];
 
   return (
-    <div>
-      <ul className="menu-bar">
-        {title.map((item) => {
-          return (
-            <li key={item.id} className="menu-bar-li">
-              {item.menu}
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+    <ul className="menu-bar">
+      {title.map((item) => {
+        return (
+          <li key={item.id} className="menu-bar-li">
+            {item.menu}
+          </li>
+        );
+      })}
+    </ul>
   );
 };
 

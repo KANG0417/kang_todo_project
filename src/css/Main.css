@@ -2,14 +2,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-width: 800px;
-  max-width: 1200px;
+  width: 100%;
 }
 
-div h2 {
+.main-wrap h2 {
   font-size: 1.8rem;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
+  margin-top: 1.5rem;
+  text-align: left;
 }
 
 .input-wrap {
@@ -18,10 +19,10 @@ div h2 {
   justify-content: center;
   align-items: center;
   font-family: "IBM Plex Sans KR", sans-serif;
-  background-color: var(--nav-bar);
+  background-color: var(--main-color);
   border-radius: 5px;
-  width: 50rem;
   height: 5rem;
+  width: 100%;
   margin: 0 auto;
   color: var(--white);
 }
@@ -51,7 +52,7 @@ div h2 {
 }
 
 .input-btn:hover {
-  color: var(--nav-bar);
+  color: var(--main-color);
   background-color: var(--white);
 }
 
@@ -59,10 +60,10 @@ div h2 {
 .input-done-btn,
 .input-cancel-btn {
   cursor: pointer;
-  border: 1px solid var(--nav-bar);
+  border: 1px solid var(--main-color);
   border-radius: 5px;
   background-color: transparent;
-  color: var(--nav-bar);
+  color: var(--main-color);
   padding: 0.2rem 0.5rem 0.2rem 0.5rem;
   transition: 0.3s;
   font-weight: 600;
@@ -74,15 +75,15 @@ div h2 {
 .input-done-btn:hover,
 .input-cancel-btn:hover {
   color: var(--white);
-  background-color: var(--nav-bar);
+  background-color: var(--main-color);
 }
 
 .card-wrap {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 3rem 0 1rem 0;
-  width: 50rem;
+  margin: 0 0 1.5rem 0;
+  width: 100%;
   overflow-x: auto;
 }
 
@@ -91,13 +92,13 @@ div h2 {
 }
 
 .card-wrap::-webkit-scrollbar-thumb {
-  background-color: var(--nav-bar);
+  background-color: var(--main-color);
 }
 
 .working-card-wrap,
 .done-card-wrap {
   display: flex;
-  width: 15rem;
+  min-width: 15rem;
   flex-direction: row;
   flex-wrap: nowrap;
   font-family: "Montserrat", sans-serif;
@@ -105,33 +106,67 @@ div h2 {
 
 .working-no-card,
 .done-no-card {
-  margin: 1rem 1rem 1rem 0;
+  margin: 4rem 0 3rem 1rem;
   border-radius: 5px;
   padding: 1rem;
   font-family: "IBM Plex Sans KR", sans-serif;
-  color: var(--nav-bar);
+  color: var(--main-color);
   font-weight: 600;
+}
+
+.working-no-card p,
+.done-no-card p {
+  width: 230px;
 }
 
 .working-card-list,
 .done-card-list {
   min-width: 10rem;
   margin: 1rem 1rem 1rem 0;
-  border: 1.5px solid var(--nav-bar);
+  border: 1.5px solid var(--point-color);
   border-radius: 5px;
   padding: 1rem;
   font-family: "IBM Plex Sans KR", sans-serif;
+  transition: 0.3s;
+}
+
+.working-card-list:hover,
+.done-card-list:hover {
+  background-color: var(--point-color);
+}
+
+.working-card-list:hover .date-now,
+.done-card-list:hover .date-now,
+.working-card-list:hover .working-title,
+.done-card-list:hover .done-title,
+.working-card-list:hover .working-content,
+.done-card-list:hover .done-content {
+  color: var(--white);
+}
+
+.working-card-list:hover .input-del-btn,
+.working-card-list:hover .input-done-btn,
+.done-card-list:hover .input-done-btn,
+.done-card-list:hover .input-done-btn {
+  color: var(--white);
+  border: 1px solid var(--white);
 }
 
 .working-title,
 .done-title {
   font-weight: 600;
   font-size: 2rem;
-  color: var(--nav-bar);
+  color: var(--main-color);
   margin-bottom: 0.5rem;
 }
 
 .working-content,
 .done-content {
-  margin: 1rem 0;
+  margin: 1rem 0 1rem 0;
+}
+
+.date-now {
+  font-weight: 600;
+  color: var(--point-color);
+  font-size: 0.75rem;
 }

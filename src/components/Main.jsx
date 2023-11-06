@@ -3,21 +3,41 @@ import "../css/Main.css";
 import AddCardButton from "../button/AddCardButton";
 import RemoveCardButton from "../button/RemoveCardButton";
 import CheckedButton from "../button/CheckedButton";
+import moment from "moment";
 
 const Main = () => {
   const [queryTitle, setQueryTitle] = useState("");
   const [queryContent, setqueryContent] = useState("");
-  const [todos, setTodos] = useState([]);
-  const [done, setDone] = useState([]);
-  const [idx, setIdx] = useState(0);
+  const [todos, setTodos] = useState(
+    JSON.parse(localStorage.getItem("working")) || []
+  );
+  const working = todos.filter((data) => !data.isDone);
+  const done = todos.filter((data) => data.isDone);
+
+  const nowTime = moment().format("YY-MM-DD HH:mm:ss");
+
+  // 리뷰마다 고유값 생성
+  function uuidv4() {
+    return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>
+      (
+        c ^
+        (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))
+      ).toString(16)
+    );
+  }
 
   const newTodo = {
-    id: idx,
-    date
+    id: uuidv4(),
+    date: nowTime,
     title: queryTitle,
     body: queryContent,
     isDone: false,
   };
+
+  // useEffect(() => {
+  //   const todos = JSON.parse(localStorage.getItem("working")) || [];
+  //   setTodos(todos);
+  // }, []);
 
   const handleChangeTitle = (event) => {
     const InputTitle = event.target.value;
@@ -45,8 +65,8 @@ const Main = () => {
     }
 
     setTodos([...todos, newTodo]);
-    setIdx((idx) => idx + 1);
 
+    localStorage.setItem("working", JSON.stringify([...working, newTodo]));
     setQueryTitle("");
     setqueryContent("");
   };
@@ -69,7 +89,8 @@ const Main = () => {
       return data;
     });
 
-    setDone(updatedTodos);
+    localStorage.setItem("working", JSON.stringify([...updatedTodos]));
+    setTodos(updatedTodos);
   };
 
   return (
@@ -94,15 +115,15 @@ const Main = () => {
         </form>
       </article>
 
+      <h2>Working..🔥</h2>
       <div className="card-wrap">
-        <h2>Working..🔥</h2>
         <article className="working-card-wrap">
-          {todos.length > 0 ? (
-            todos.map((data) => {
+          {working.length > 0 ? (
+            working.map((data) => {
               return (
                 <div key={data.id} className="working-card-list">
                   <p className="working-title">{data.title}</p>
-                  <p className="date-now">23년 11월 5일 11:42:44</p>
+                  <p className="date-now">{data.date}</p>
                   <p className="working-content">{data.body}</p>
                   <RemoveCardButton
                     data={data}
@@ -123,14 +144,16 @@ const Main = () => {
         </article>
       </div>
 
+      <h2>Done..🎉</h2>
       <div className="card-wrap">
-        <h2>Done..🎉</h2>
         <article className="done-card-wrap">
           {done.length > 0 ? (
             done.map((data) => {
               return (
                 <div key={data.id} className="done-card-list">
                   <p className="done-title">{data.title}</p>
+                  <p className="date-now">✨완료시간✨</p>
+                  <p className="date-now">{nowTime}</p>
                   <p className="done-content">{data.body}</p>
                   <RemoveCardButton
                     data={data}

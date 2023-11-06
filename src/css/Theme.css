@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;300&display=swap");
 
 :root {
-  --nav-bar: #437299;
+  --main-color: #437299;
+  --point-color: #6a69ae;
   --white: #fff;
 }
