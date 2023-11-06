@@ -1,9 +1,9 @@
 import React, { useState } from "react";
+import moment from "moment";
 import "../css/Main.css";
 import AddCardButton from "../button/AddCardButton";
 import RemoveCardButton from "../button/RemoveCardButton";
 import CheckedButton from "../button/CheckedButton";
-import moment from "moment";
 
 const Main = () => {
   const [queryTitle, setQueryTitle] = useState("");
@@ -33,11 +33,6 @@ const Main = () => {
     body: queryContent,
     isDone: false,
   };
-
-  // useEffect(() => {
-  //   const todos = JSON.parse(localStorage.getItem("working")) || [];
-  //   setTodos(todos);
-  // }, []);
 
   const handleChangeTitle = (event) => {
     const InputTitle = event.target.value;
